@@ -1,0 +1,14 @@
+{
+  "name": "Restaurant Reviews",
+  "short_name": "RestaurantReviews",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#317EFB",
+  "description": "A simply readable Restaurant Reviews app.",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }]
+}
