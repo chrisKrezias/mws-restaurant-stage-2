@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#317EFB"/>
+    <meta name="theme-color" content="#317EFB" />
     <script>
     // https://github.com/filamentgroup/loadCSS
     ! function(e) {
@@ -48,7 +48,8 @@
     </header>
     <main id="maincontent">
         <section id="map-container" tabindex="-1">
-            <div id="map" role="application"></div>
+            <img id="static_map" onclick="swap_map()" src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&format=jpg" alt="Click for Google Map" style="width:100%;height:100%;"></img>
+            <div id="map" role="application" style="display: none"></div>
         </section>
         <section id="main">
             <div class="filter-options">
@@ -66,6 +67,26 @@
     <footer id="footer">
         Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDxpcbqESDSER1cymqdXSEM25o0z6JwIc0",
+        authDomain: "restaurant-review-app-526f9.firebaseapp.com",
+        databaseURL: "https://restaurant-review-app-526f9.firebaseio.com",
+        projectId: "restaurant-review-app-526f9",
+        storageBucket: "",
+        messagingSenderId: "993867618311"
+    };
+    firebase.initializeApp(config);
+
+    const swap_map = () => {
+        if (document.getElementById('map').style.display === 'none') {
+            document.getElementById('map').style.display = 'block'
+            document.getElementById('static_map').style.display = 'none'
+        }
+    }
+    </script>
     <script type="text/javascript" src="js/lib/lazysizes.min.js"></script>
     <script type="text/javascript" src="js/lib/idb.js"></script>
     <script type="text/javascript" src="js/db/IndexController.js"></script>
