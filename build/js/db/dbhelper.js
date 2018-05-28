@@ -37,6 +37,12 @@ class DBHelper {
                         }).then(allObjs => callback(null, allObjs));
                     }
                 };
+                if (xhr.response=="") {
+                    dbPromise.then(db => {
+                        return db.transaction('keyval')
+                            .objectStore('keyval').getAll();
+                    }).then(allObjs => callback(null, allObjs));
+                }
             }
         };
         xhr.send();
