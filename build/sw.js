@@ -1,8 +1,9 @@
-var cache_name = "my-site-cache-v3";
+var cache_name = "my-site-cache-v4";
 var urlsToCache = [
     "/",
     "js/lib/lazysizes.min.js",
     "js/lib/idb.js",
+    "js/lib/node.js",
     "js/db/IndexController.js",
     "js/db/dbhelper.js",
     "js/main.js",
