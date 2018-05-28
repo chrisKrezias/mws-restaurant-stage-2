@@ -19,7 +19,7 @@ p {
 }
 
 body {
-    background-color: #fdfdfd;
+    background-color: #f3f3f3;
     position: relative;
 }
 
@@ -78,6 +78,7 @@ option {
     background-color: #f3f3f3;
     min-height: 100%;
     padding-bottom: 3%;
+    margin: auto;
 }
 
 #footer {
@@ -454,6 +455,10 @@ nav h1 a {
 }
 
 @media only screen and (min-width:1024px) {
+    #maincontent{
+        max-width: 1699px;
+    }
+
     #restaurants-list li {
         width: 270px;
     }
